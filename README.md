@@ -3,7 +3,7 @@ Extra Layers that I have added to Keras
 
 Commented out layers mean that they have been added to the Keras master branch
 
-Copyright Aran Nayebi, 2015
+Aran Nayebi, 2015
 
 anayebi@stanford.edu
 
