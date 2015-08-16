@@ -1,5 +1,8 @@
 # Extra Layers that I have added to Keras
-# Commented out layers mean that they have been added to the Keras master branch
+# Layers that have been added to the Keras master branch will be noted both in the ReadMe and in extra.py. 
+# Feel free to use that layer either from Keras directly or from the version in extra.py 
+# (note I will no longer update a layer in extra.py once it has been added to Keras).
+#
 # Copyright Aran Nayebi, 2015
 # anayebi@stanford.edu
 #
@@ -34,23 +37,23 @@ srng = RandomStreams(seed=np.random.randint(10e6))
 from ..layers.core import Layer
 
 # Permute Layer added to keras.layers.core, July 17 2015
-# class Permute(Layer):
-# 	# Permutes the dimensions of the data according to the given tuple.
-# 	# Input shape: This layer does not assume a specific input shape.
-# 	# Output shape: Same as the input shape, but with the dimensions re-ordered according to the ordering specified by the tuple.
-# 	# Arguments:
-# 	# Tuple is a tensor that specifies the ordering of the dimensions of the data.
-# 	def __init__(self, dims):
-# 		super(Permute,self).__init__()
-# 		self.dims = dims
+class Permute(Layer):
+	# Permutes the dimensions of the data according to the given tuple.
+	# Input shape: This layer does not assume a specific input shape.
+	# Output shape: Same as the input shape, but with the dimensions re-ordered according to the ordering specified by the tuple.
+	# Arguments:
+	# Tuple is a tensor that specifies the ordering of the dimensions of the data.
+	def __init__(self, dims):
+		super(Permute,self).__init__()
+		self.dims = dims
 
-# 	def get_output(self, train):
-# 		X = self.get_input(train)
-# 		return X.dimshuffle((0,) + self.dims)
+	def get_output(self, train):
+		X = self.get_input(train)
+		return X.dimshuffle((0,) + self.dims)
 
-# 	def get_config(self):
-# 		return {"name":self.__class__.__name__,
-# 			"dims":self.dims}
+	def get_config(self):
+		return {"name":self.__class__.__name__,
+			"dims":self.dims}
 
 class TimeDistributedFlatten(Layer):
 	# This layer reshapes input to be flat across timesteps (cannot be used as the first layer of a model)
@@ -186,6 +189,7 @@ class TimeDistributedMaxPooling2D(Layer):
 				"ignore_border":self.ignore_border,
 				"stride": self.stride}
 
+# UpSample1D Layer added to keras.layers.core, August 16 2015
 class UpSample1D(Layer):
 	# This layer upsamples input across one dimension (e.g. inverse MaxPooling1D)
 	# Input shape: (num_samples, steps, dim)
@@ -205,6 +209,7 @@ class UpSample1D(Layer):
 		return {"name":self.__class__.__name__,
 				"upsample_length":self.upsample_length}
 
+# UpSample2D Layer added to keras.layers.core, August 16 2015
 class UpSample2D(Layer):
 	# This layer upsamples input across two dimensions (e.g. inverse MaxPooling2D)
 	# Input shape: (num_samples, stack_size, num_rows, num_cols)
