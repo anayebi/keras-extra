@@ -1,7 +1,7 @@
 # keras-extra
 Extra Layers that I have added to Keras
 
-Commented out layers mean that they have been added to the Keras master branch
+Layers that have been added to the Keras master branch will be noted both in the ReadMe and in extra.py. Feel free to use that layer either from Keras directly or from the version in extra.py (note I will no longer update a layer in extra.py once it has been added to Keras). 
 
 Aran Nayebi, 2015
 
