@@ -189,7 +189,7 @@ class TimeDistributedMaxPooling2D(Layer):
 				"ignore_border":self.ignore_border,
 				"stride": self.stride}
 
-# UpSample1D Layer added to keras.layers.core, August 16 2015
+# UpSample1D Layer added to keras.layers.convolutional, August 16 2015
 class UpSample1D(Layer):
 	# This layer upsamples input across one dimension (e.g. inverse MaxPooling1D)
 	# Input shape: (num_samples, steps, dim)
@@ -209,7 +209,7 @@ class UpSample1D(Layer):
 		return {"name":self.__class__.__name__,
 				"upsample_length":self.upsample_length}
 
-# UpSample2D Layer added to keras.layers.core, August 16 2015
+# UpSample2D Layer added to keras.layers.convolutional, August 16 2015
 class UpSample2D(Layer):
 	# This layer upsamples input across two dimensions (e.g. inverse MaxPooling2D)
 	# Input shape: (num_samples, stack_size, num_rows, num_cols)
