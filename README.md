@@ -26,7 +26,7 @@ or, if you don't have super user access, just run:
 
 # Layers
 
-- Permute (added to keras.layers.core, July 17 2015)
+- **Permute** (added to keras.layers.core, July 17 2015)
 
     Permutes the dimensions of the data according to the given tuple.
     
@@ -36,7 +36,7 @@ or, if you don't have super user access, just run:
 
     Arguments: Tuple is a tensor that specifies the ordering of the dimensions of the data.
 
-- TimeDistributedFlatten
+- **TimeDistributedFlatten**
 
 	This layer reshapes input to be flat across timesteps (cannot be used as the first layer of a model)
 
@@ -46,7 +46,7 @@ or, if you don't have super user access, just run:
 	
 	Potential use case: For stacking after a Time Distributed Convolution/Max Pooling Layer or other Time Distributed Layer
 	
-- TimeDistributedConvolution2D
+- **TimeDistributedConvolution2D**
 
 	This layer performs 2D Convolutions with the extra dimension of time
 	
@@ -56,7 +56,7 @@ or, if you don't have super user access, just run:
 	
     Potential use case: For connecting a Convolutional Layer with a Recurrent or other Time Distributed Layer
 
-- TimeDistributedMaxPooling2D
+- **TimeDistributedMaxPooling2D**
 
     This layer performs 2D Max Pooling with the extra dimension of time
 	
@@ -66,7 +66,7 @@ or, if you don't have super user access, just run:
 	
     Potential use case: For stacking after a Time Distributed Convolutional Layer or other Time Distributed Layer
 
-- UpSample1D (added to keras.layers.convolutional, August 16 2015)
+- **UpSample1D** (added to keras.layers.convolutional, August 16 2015)
 
 	This layer upsamples input across one dimension (e.g. inverse MaxPooling1D)
 	
@@ -76,7 +76,7 @@ or, if you don't have super user access, just run:
 	
     Potential use case: For stacking after a MaxPooling1D Layer
 
-- UpSample2D (added to keras.layers.convolutional, August 16 2015)
+- **UpSample2D** (added to keras.layers.convolutional, August 16 2015)
 
 	This layer upsamples input across two dimensions (e.g. inverse MaxPooling2D)
 	
@@ -86,7 +86,7 @@ or, if you don't have super user access, just run:
 	
     Potential use case: For stacking after a MaxPooling2D Layer
 
-- Dense2D
+- **Dense2D**
 
 	This layer performs an affine transformation on a 2D input
 	
