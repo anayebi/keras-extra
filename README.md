@@ -17,7 +17,7 @@ or, if you don't have super user access, just run:
     
     pip install --upgrade git+git://github.com/fchollet/keras.git --user
 
-2. Add this file to your Keras installation in the layers directory (keras/layers/)
+2. Add extra.py to your Keras installation in the layers directory (keras/layers/)
 
 3. Now, to use any layer, just run:
     
