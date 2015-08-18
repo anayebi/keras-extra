@@ -26,7 +26,7 @@ or, if you don't have super user access, just run:
 
 # Layers
 
-- **Permute** (added to keras.layers.core, July 17 2015)
+- **Permute** (added to keras.layers.core, July 17 2015: https://github.com/fchollet/keras/pull/409)
 
     Permutes the dimensions of the data according to the given tuple.
     
@@ -66,7 +66,7 @@ or, if you don't have super user access, just run:
 	
     Potential use case: For stacking after a Time Distributed Convolutional Layer or other Time Distributed Layer
 
-- **UpSample1D** (added to keras.layers.convolutional, August 16 2015)
+- **UpSample1D** (added to keras.layers.convolutional, August 16 2015: https://github.com/fchollet/keras/pull/532)
 
 	This layer upsamples input across one dimension (e.g. inverse MaxPooling1D)
 	
@@ -76,7 +76,7 @@ or, if you don't have super user access, just run:
 	
     Potential use case: For stacking after a MaxPooling1D Layer
 
-- **UpSample2D** (added to keras.layers.convolutional, August 16 2015)
+- **UpSample2D** (added to keras.layers.convolutional, August 16 2015: https://github.com/fchollet/keras/pull/532)
 
 	This layer upsamples input across two dimensions (e.g. inverse MaxPooling2D)
 	
