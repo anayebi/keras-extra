@@ -1,5 +1,5 @@
 # keras-extra
-Extra Layers that I have added to Keras
+Extra Layers that I have added to Keras: Theano-based Deep Learning library. More information about Keras can be found here: https://github.com/fchollet/keras/
 
 Layers that have been added to the Keras master branch will be noted both in the ReadMe and in extra.py. Feel free to use that layer either from Keras directly or from the version in extra.py (note I will no longer update a layer in extra.py once it has been added to Keras). 
 
