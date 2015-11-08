@@ -1,7 +1,7 @@
 # keras-extra
 Extra Layers that I have added to Keras: Theano-based Deep Learning library. More information about Keras can be found here: https://github.com/fchollet/keras/
 
-Layers that have been added to the Keras master branch will be noted both in the ReadMe and in extra.py. Feel free to use that layer either from Keras directly or from the version in extra.py (note I will no longer update a layer in extra.py once it has been added to Keras). 
+Layers that have been added to the Keras master branch will be noted in the ReadMe and removed from extra.py.
 
 Aran Nayebi, 2015
 
@@ -26,16 +26,6 @@ or, if you don't have super user access, just run:
 
 # Layers
 
-- **Permute** (added to keras.layers.core, July 17 2015: https://github.com/fchollet/keras/pull/409)
-
-    Permutes the dimensions of the data according to the given tuple.
-    
-    Input shape: This layer does not assume a specific input shape.
-    
-    Output shape: Same as the input shape, but with the dimensions re-ordered according to the ordering specified by the tuple.
-
-    Arguments: Tuple is a tensor that specifies the ordering of the dimensions of the data.
-
 - **TimeDistributedFlatten**
 
 	This layer reshapes input to be flat across timesteps (cannot be used as the first layer of a model)
@@ -54,7 +44,7 @@ or, if you don't have super user access, just run:
 	
     Output shape: (num_samples, num_timesteps, num_filters, num_rows, num_cols), Note: num_rows and num_cols could have changed
 	
-    Potential use case: For connecting a Convolutional Layer with a Recurrent or other Time Distributed Layer
+    Potential use case: For connecting a Convolutional Layer with a Recurrent or other Time Distributed Layer. If it is the first layer of the network, you must specify the input shape with the argument input_shape=(num_time_steps, num_channels, num_rows, num_cols).
 
 - **TimeDistributedMaxPooling2D**
 
@@ -65,6 +55,18 @@ or, if you don't have super user access, just run:
     Output shape: (num_samples, num_timesteps, stack_size, new_num_rows, new_num_cols)
 	
     Potential use case: For stacking after a Time Distributed Convolutional Layer or other Time Distributed Layer
+
+# Removed Layers:
+
+- **Permute** (added to keras.layers.core, July 17 2015: https://github.com/fchollet/keras/pull/409)
+
+    Permutes the dimensions of the data according to the given tuple.
+    
+    Input shape: This layer does not assume a specific input shape.
+    
+    Output shape: Same as the input shape, but with the dimensions re-ordered according to the ordering specified by the tuple.
+
+    Arguments: Tuple is a tensor that specifies the ordering of the dimensions of the data.
 
 - **UpSample1D** (added to keras.layers.convolutional, August 16 2015: https://github.com/fchollet/keras/pull/532)
 
@@ -85,13 +87,3 @@ or, if you don't have super user access, just run:
     Output shape: (num_samples, stack_size, new_num_rows, new_num_cols)
 	
     Potential use case: For stacking after a MaxPooling2D Layer
-
-- **Dense2D**
-
-	This layer performs an affine transformation on a 2D input
-	
-    Input shape: (num_samples, input_dim_rows, input_dim_cols)
-	
-    Output shape: (num_samples, input_dim_rows, output_dim_cols)
-	
-    Potential use case: For layer L, does LW + b, where W is input_dim_cols x output_dim_cols weight matrix and b is input_dim_rows x output_dim_cols bias
