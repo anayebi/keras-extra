@@ -81,7 +81,7 @@ class TimeDistributedFlatten(Layer):
     @property
     def output_shape(self):
         input_shape = self.input_shape
-        return (input_shape[0], input_shape[0], np.prod(input_shape[2:]))
+        return (input_shape[0], input_shape[1], np.prod(input_shape[2:]))
 
     def get_output(self, train=False):
         X = self.get_input(train)
