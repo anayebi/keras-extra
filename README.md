@@ -44,7 +44,7 @@ or, if you don't have super user access, just run:
 	
     Default Output shape (Theano dim ordering): (num_samples, num_timesteps, num_filters, num_rows, num_cols), Note: num_rows and num_cols could have changed
 	
-    Potential use case: For connecting a Convolutional Layer with a Recurrent or other Time Distributed Layer. If it is the first layer of the network, you must specify the Default Input shape (Theano dim ordering) with the argument input_shape=(num_time_steps, num_channels, num_rows, num_cols).
+    Potential use case: For connecting a Convolutional Layer with a Recurrent or other Time Distributed Layer. If it is the first layer of the network, you must specify the Default Input shape (Theano dim ordering) with the argument input_shape=(num_time_steps, num_channels, num_rows, num_cols), or if using TensorFlow, supply the argument, batch_input_shape=(num_samples, num_time_steps, num_rows, num_cols, num_channels).
 
 - **TimeDistributedMaxPooling2D**
 
