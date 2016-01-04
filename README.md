@@ -18,7 +18,7 @@ or, if you don't have super user access, just run:
     
     pip install --upgrade git+git://github.com/fchollet/keras.git --user
 
-2. Add extra.py to your Keras installation in the layers directory (keras/layers/)
+2. Add extra.py to your Keras installation in the layers directory (keras/layers/), and tensorflow_backend.py and theano_backend.py in the backend directory (keras/backend/)
 
 3. Now, to use any layer, just run:
     
@@ -30,9 +30,9 @@ or, if you don't have super user access, just run:
 
 	This layer reshapes input to be flat across timesteps (cannot be used as the first layer of a model)
 
-	Input shape: (num_samples, num_timesteps, *)
+	Default Input shape (Theano dim ordering): (num_samples, num_timesteps, *)
 	
-	Output shape: (num_samples, num_timesteps, num_input_units)
+	Default Output shape (Theano dim ordering): (num_samples, num_timesteps, num_input_units)
 	
 	Potential use case: For stacking after a Time Distributed Convolution/Max Pooling Layer or other Time Distributed Layer
 	
@@ -40,19 +40,19 @@ or, if you don't have super user access, just run:
 
 	This layer performs 2D Convolutions with the extra dimension of time
 	
-    Input shape: (num_samples, num_timesteps, stack_size, num_rows, num_cols)
+    Default Input shape (Theano dim ordering): (num_samples, num_timesteps, stack_size, num_rows, num_cols)
 	
-    Output shape: (num_samples, num_timesteps, num_filters, num_rows, num_cols), Note: num_rows and num_cols could have changed
+    Default Output shape (Theano dim ordering): (num_samples, num_timesteps, num_filters, num_rows, num_cols), Note: num_rows and num_cols could have changed
 	
-    Potential use case: For connecting a Convolutional Layer with a Recurrent or other Time Distributed Layer. If it is the first layer of the network, you must specify the input shape with the argument input_shape=(num_time_steps, num_channels, num_rows, num_cols).
+    Potential use case: For connecting a Convolutional Layer with a Recurrent or other Time Distributed Layer. If it is the first layer of the network, you must specify the Default Input shape (Theano dim ordering) with the argument input_shape=(num_time_steps, num_channels, num_rows, num_cols).
 
 - **TimeDistributedMaxPooling2D**
 
     This layer performs 2D Max Pooling with the extra dimension of time
 	
-    Input shape: (num_samples, num_timesteps, stack_size, num_rows, num_cols)
+    Default Input shape (Theano dim ordering): (num_samples, num_timesteps, stack_size, num_rows, num_cols)
 	
-    Output shape: (num_samples, num_timesteps, stack_size, new_num_rows, new_num_cols)
+    Default Output shape (Theano dim ordering): (num_samples, num_timesteps, stack_size, new_num_rows, new_num_cols)
 	
     Potential use case: For stacking after a Time Distributed Convolutional Layer or other Time Distributed Layer
 
@@ -62,9 +62,9 @@ or, if you don't have super user access, just run:
 
     Permutes the dimensions of the data according to the given tuple.
     
-    Input shape: This layer does not assume a specific input shape.
+    Default Input shape (Theano dim ordering): This layer does not assume a specific Default Input shape (Theano dim ordering).
     
-    Output shape: Same as the input shape, but with the dimensions re-ordered according to the ordering specified by the tuple.
+    Default Output shape (Theano dim ordering): Same as the Default Input shape (Theano dim ordering), but with the dimensions re-ordered according to the ordering specified by the tuple.
 
     Arguments: Tuple is a tensor that specifies the ordering of the dimensions of the data.
 
@@ -72,9 +72,9 @@ or, if you don't have super user access, just run:
 
 	This layer upsamples input across one dimension (e.g. inverse MaxPooling1D)
 	
-    Input shape: (num_samples, steps, dim)
+    Default Input shape (Theano dim ordering): (num_samples, steps, dim)
 	
-    Output shape: (num_samples, upsampled_steps, dim)
+    Default Output shape (Theano dim ordering): (num_samples, upsampled_steps, dim)
 	
     Potential use case: For stacking after a MaxPooling1D Layer
 
@@ -82,8 +82,8 @@ or, if you don't have super user access, just run:
 
 	This layer upsamples input across two dimensions (e.g. inverse MaxPooling2D)
 	
-    Input shape: (num_samples, stack_size, num_rows, num_cols)
+    Default Input shape (Theano dim ordering): (num_samples, stack_size, num_rows, num_cols)
 	
-    Output shape: (num_samples, stack_size, new_num_rows, new_num_cols)
+    Default Output shape (Theano dim ordering): (num_samples, stack_size, new_num_rows, new_num_cols)
 	
     Potential use case: For stacking after a MaxPooling2D Layer
