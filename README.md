@@ -50,9 +50,9 @@ or, if you don't have super user access, just run:
 	
     Potential use case: For connecting a Convolutional Layer with a Recurrent or other Time Distributed Layer.
 
-- **TimeDistributedMaxPooling2D**
+- **TimeDistributedMaxPooling2D (and TimeDistributedAveragePooling2D)**
 
-    This layer performs 2D Max Pooling with the extra dimension of time
+    These layers perform 2D Max Pooling and 2D Average Pooling with the extra dimension of time
 	
     Default Input shape (Theano dim ordering): (num_samples, num_timesteps, stack_size, num_rows, num_cols)
 	
