@@ -26,7 +26,7 @@ If you already have Keras installed, for this to work on your current installati
 
 1. Download the appropriate version of Keras (for the current version of these layers, just use Keras 0.3.0):
 
-2. Add extra.py to your Keras installation in the layers directory (keras/layers/), and tensorflow_backend.py and theano_backend.py in the backend directory (keras/backend/)
+2. Add extra.py to your Keras installation in the layers directory (keras/layers/), and if you are using the current version of these layers, also add tensorflow_backend.py and theano_backend.py in the backend directory (keras/backend/)
 
 3. Now, cd into the Keras folder and simply run:
     
