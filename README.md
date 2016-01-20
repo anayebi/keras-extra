@@ -3,7 +3,9 @@ Extra Layers that I have added to Keras: Theano-based Deep Learning library. Mor
 
 These layers allow you to connect a Convolutional Neural Network (CNN) with a Recurrent Neural Network (RNN) of your choice by allowing the CNN layers to be time distributed.
 
-Currently, this code works with Keras v. 0.3.0. Supports both Theano and TensorFlow backends. For simplicity, in this ReadMe, we will adhere to the default Theano dim ordering, but to have the layers work with TensorFlow simply use the TensorFlow ordering specified in Keras.
+Currently, this code works with Keras v. 0.3.0. 
+
+Supports both Theano and TensorFlow backends. For simplicity, in this ReadMe, we will adhere to the default Theano dim ordering, but to have the layers work with TensorFlow simply use the TensorFlow ordering specified in Keras.
 
 If you are using TimeDistributedConvolution2D as the first layer of the network, then for the Theano backend, you must specify the input shape with the argument input_shape=(num_time_steps, num_channels, num_rows, num_cols), or if using TensorFlow, supply the argument, batch_input_shape=(batch_num_samples, num_time_steps, num_rows, num_cols, num_channels).
 
