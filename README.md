@@ -18,6 +18,7 @@ anayebi@stanford.edu
 For versions of these layers that are compatible with earlier versions of Keras, feel free to check out the following prior commits:
 
 b4dc512 will work with Keras v 0.2.0
+
 fb135ee will work with Keras v 0.1.0
 
 # Installation Instructions
