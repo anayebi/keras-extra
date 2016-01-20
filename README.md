@@ -1,15 +1,22 @@
 # keras-extra
 Extra Layers that I have added to Keras: Theano-based Deep Learning library. More information about Keras can be found here: https://github.com/fchollet/keras/
 
-Supports both Theano and TensorFlow backends. For simplicity, in this ReadMe, we will adhere to the default Theano dim ordering, but to have the layers work with TensorFlow simply use the TensorFlow ordering specified in Keras.
+These layers allow you to connect a Convolutional Neural Network (CNN) with a Recurrent Neural Network (RNN) of your choice by allowing the CNN layers to be time distributed.
+
+Currently, this code works with Keras v. 0.3.0. Supports both Theano and TensorFlow backends. For simplicity, in this ReadMe, we will adhere to the default Theano dim ordering, but to have the layers work with TensorFlow simply use the TensorFlow ordering specified in Keras.
 
 If you are using TimeDistributedConvolution2D as the first layer of the network, then for the Theano backend, you must specify the input shape with the argument input_shape=(num_time_steps, num_channels, num_rows, num_cols), or if using TensorFlow, supply the argument, batch_input_shape=(batch_num_samples, num_time_steps, num_rows, num_cols, num_channels).
 
 Layers that have been added to the Keras master branch will be noted in the ReadMe and removed from extra.py.
 
-Aran Nayebi, 2015
+Aran Nayebi, 2016
 
 anayebi@stanford.edu
+
+For versions of these layers that are compatible with earlier versions of Keras, feel free to check out the following prior commits:
+
+b4dc512 will work with Keras v 0.2.0
+fb135ee will work with Keras v 0.1.0
 
 # Installation Instructions
 If you already have Keras installed, for this to work on your current installation, please do the following:
