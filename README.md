@@ -17,24 +17,26 @@ anayebi@stanford.edu
 
 For versions of these layers that are compatible with earlier versions of Keras, feel free to check out the following prior commits:
 
-b4dc512 will work with Keras v 0.2.0
+b4dc512 will work with Keras v. 0.2.0
 
-fb135ee will work with Keras v 0.1.0
+fb135ee will work with Keras v. 0.1.0
 
 # Installation Instructions
 If you already have Keras installed, for this to work on your current installation, please do the following:
 
-1. Upgrade to the newest version of Keras (since some layers may have been added from here that are now commented out):
-    
-    sudo pip install --upgrade git+git://github.com/fchollet/keras.git
-
-or, if you don't have super user access, just run:
-    
-    pip install --upgrade git+git://github.com/fchollet/keras.git --user
+1. Download the appropriate version of Keras (for the current version of these layers, just use Keras 0.3.0):
 
 2. Add extra.py to your Keras installation in the layers directory (keras/layers/), and tensorflow_backend.py and theano_backend.py in the backend directory (keras/backend/)
 
-3. Now, to use any layer, just run:
+3. Now, cd into the Keras folder and simply run:
+    
+    python setup.py install
+
+or, if you don't have administrative access, just run:
+    
+    python setup.py install --user
+    
+4. Now, to use any layer, just run:
     
     from keras.layers.extra import layername
 
