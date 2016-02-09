@@ -5,7 +5,7 @@ These layers allow you to connect a Convolutional Neural Network (CNN) with a Re
 
 For an example of using these layers, see here: https://github.com/jamesmf/mnistCRNN
 
-Currently, this code works with #Keras v. 0.3.0.
+Currently, this code works with Keras v. 0.3.0.
 
 For versions of these layers that are compatible with earlier versions of Keras, feel free to check out the following prior commits:
 
