@@ -3,7 +3,15 @@ Extra Layers that I have added to Keras: Theano-based Deep Learning library. Mor
 
 These layers allow you to connect a Convolutional Neural Network (CNN) with a Recurrent Neural Network (RNN) of your choice by allowing the CNN layers to be time distributed.
 
-Currently, this code works with Keras v. 0.3.0. 
+For an example of using these layers, see here: https://github.com/jamesmf/mnistCRNN
+
+Currently, this code works with #Keras v. 0.3.0.
+
+For versions of these layers that are compatible with earlier versions of Keras, feel free to check out the following prior commits:
+
+b4dc512 will work with Keras v. 0.2.0
+
+fb135ee will work with Keras v. 0.1.0
 
 Supports both Theano and TensorFlow backends. For simplicity, in this ReadMe, we will adhere to the default Theano dim ordering, but to have the layers work with TensorFlow simply use the TensorFlow ordering specified in Keras.
 
@@ -14,12 +22,6 @@ Layers that have been added to the Keras master branch will be noted in the Read
 Aran Nayebi, 2016
 
 anayebi@stanford.edu
-
-For versions of these layers that are compatible with earlier versions of Keras, feel free to check out the following prior commits:
-
-b4dc512 will work with Keras v. 0.2.0
-
-fb135ee will work with Keras v. 0.1.0
 
 # Installation Instructions
 If you already have Keras installed, for this to work on your current installation, please do the following:
