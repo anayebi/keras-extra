@@ -1,5 +1,5 @@
 # keras-extra
-Extra Layers that I have added to **Keras: Theano-based Deep Learning library**. More information about Keras can be found here: https://github.com/fchollet/keras/
+Extra Layers that I have added to **Keras: Deep Learning library for Theano and TensorFlow**. More information about Keras can be found here: https://github.com/fchollet/keras/
 
 These layers allow you to connect a Convolutional Neural Network (CNN) with a Recurrent Neural Network (RNN) of your choice by allowing the CNN layers to be time distributed.
 
